@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5142506c-2007-4587-b52a-7abd579f6fbc">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     Xe."MaXe" AS Xe_MaXe,
+     Xe."TenHangXe" AS Xe_TenHangXe,
+     Xe."SoLuong" AS Xe_SoLuong,
+     Xe."ThongTinBaoHanh" AS Xe_ThongTinBaoHanh,
+     Xe."TenXe" AS Xe_TenXe,
+     Xe."NhaSX" AS Xe_NhaSX,
+     Xe."DonGia" AS Xe_DonGia,
+     Xe."TinhTrang" AS Xe_TinhTrang
+FROM
+     "dbo"."Xe" Xe]]>
+	</queryString>
+	<field name="Xe_MaXe" class="java.lang.String"/>
+	<field name="Xe_TenHangXe" class="java.lang.String"/>
+	<field name="Xe_SoLuong" class="java.lang.Integer"/>
+	<field name="Xe_ThongTinBaoHanh" class="java.lang.String"/>
+	<field name="Xe_TenXe" class="java.lang.String"/>
+	<field name="Xe_NhaSX" class="java.lang.String"/>
+	<field name="Xe_DonGia" class="java.math.BigDecimal"/>
+	<field name="Xe_TinhTrang" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="133" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="152" y="20" width="263" height="62" uuid="f2429961-2b40-4ea4-90cf-f998f0479442"/>
+				<textElement verticalAlignment="Middle">
+					<font size="36" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Hàng tôn kho]]></text>
+			</staticText>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement style="Column header" x="0" y="0" width="116" height="20" forecolor="#736343" uuid="a907e2f8-58dc-4b47-8d46-bf5f18573b5a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="37a221ff-8dbb-48cf-9867-b43bab398274"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="44" y="0" width="69" height="15" forecolor="#736343" uuid="ee394127-3aab-42d9-9959-15c14bc6d6af"/>
+				<text><![CDATA[Mã Xe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="387" y="0" width="87" height="15" forecolor="#736343" uuid="225917b2-74df-4348-8189-785f43a37399"/>
+				<text><![CDATA[Thông tin bảo hành]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="113" y="1" width="98" height="15" forecolor="#736343" uuid="78312c4f-81d3-41a9-ac35-19b8a0f8b54f"/>
+				<text><![CDATA[Tên Xe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="211" y="0" width="115" height="15" forecolor="#736343" uuid="7b4c3d57-028d-448f-a671-1d86a77431c0"/>
+				<text><![CDATA[Tên hãng xe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="326" y="1" width="61" height="15" forecolor="#736343" uuid="31c32b55-c473-4de4-aa0a-6fc2c6659cd1"/>
+				<text><![CDATA[Số lượng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="474" y="0" width="81" height="15" forecolor="#736343" uuid="525d0f77-81bf-4ec3-b34a-3da355e7fe82"/>
+				<text><![CDATA[Nhà SX]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="0" y="1" width="45" height="14" forecolor="#736343" uuid="2ffa8281-0815-452d-b221-d9afc5e6f868"/>
+				<text><![CDATA[STT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="17" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="15" uuid="776be9ee-fac9-434c-a097-68c33e67c472"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="44" y="0" width="69" height="15" uuid="1a9bbeb1-6d3b-4155-80ac-345171452d7a"/>
+					<textFieldExpression><![CDATA[$F{Xe_MaXe}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="113" y="0" width="98" height="15" uuid="4d26faa4-56b4-48d8-9a0c-1d2cb603b592"/>
+					<textFieldExpression><![CDATA[$F{Xe_TenXe}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="211" y="0" width="115" height="15" uuid="bad78470-fd2a-44fb-8e30-803b0942123c"/>
+					<textFieldExpression><![CDATA[$F{Xe_TenHangXe}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="387" y="0" width="87" height="15" uuid="be8f9025-3612-4512-a669-1934aa6ed5b5"/>
+					<textFieldExpression><![CDATA[$F{Xe_ThongTinBaoHanh}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="326" y="0" width="61" height="15" uuid="315fc610-1b00-4257-8b8a-d3a0fce562e1"/>
+					<textFieldExpression><![CDATA[$F{Xe_SoLuong}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="0" width="44" height="15" uuid="bcc89f71-5fea-4677-b245-4648dabb1374"/>
+					<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" x="478" y="0" width="74" height="15" uuid="b3bd4f13-8d37-436c-8f93-b6b593cdca85"/>
+				<textFieldExpression><![CDATA[$F{Xe_NhaSX}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="d011058a-516f-4b38-8096-3501e88ba13c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-66" y="1" width="597" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="ad4c54a5-d882-4d9f-9eff-f9b9a2925419"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="533" y="0" width="40" height="20" forecolor="#736343" uuid="5548f820-98b4-46c3-9ca2-9eba9d7b5e2e"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="453" y="0" width="80" height="20" forecolor="#736343" uuid="5c9baf28-382d-49ee-ad2a-dd5f85aca913"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

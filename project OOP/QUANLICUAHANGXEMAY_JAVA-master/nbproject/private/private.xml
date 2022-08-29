@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYGUI/report/Report.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYGUI/TableNhanVien.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYDLL/NhaCungCapDLL.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYGUI/BaoCaoThongKe.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYDAL/ChiTietPhieuXuatDAL.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYGUI/PhieuNhapGUI.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYDAL/NhanVienDAL.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYDLL/NhanVienDLL.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYEntity/ChiTietPhieuXuat.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYDLL/XeDLL.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYDLL/ChiTietPhieuXuatDLL.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYEntity/NhanVien.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYEntity/KhachHang.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYGUI/frmDoiMatKhau.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYGUI/TableNhaCungCap.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYEntity/ChiTietPhieuNhap.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYDLL/PhieuXuatDLL.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYEntity/Xe.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYGUI/PhieuXuatGUI.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYEntity/User.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYDAL/DataAccessHelper.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYGUI/Users.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYDAL/NhaCungCapDAL.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYDAL/PhieuXuatDAL.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYDLL/UsersDLL.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYGUI/TableXe.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYGUI/XeGUI.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYDAL/ChiTietPhieuNhapDAL.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYGUI/Main.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYGUI/QuanLiUserGUI.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYDAL/KhachHangDAL.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYEntity/NhaCungCap.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYDAL/UserDAL.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYDLL/KhachHangDLL.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYGUI/NhaCungCapGUI.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYGUI/TableKhachHang.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYDAL/PhieuNhapDAL.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYEntity/PhieuXuat.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYGUI/KhachHangGUI.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYDAL/XeDAL.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYEntity/PhieuNhap.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYDLL/ChiTietPhieuNhapDLL.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYDLL/PhieuNhapDLL.java</file>
+            <file>file:/D:/Bai%20tap%20java/QUANLICUAHANGXEMAY/src/QUANLICUAHANGXEMAYGUI/NhanVienGUI.java</file>
+        </group>
+    </open-files>
+</project-private>

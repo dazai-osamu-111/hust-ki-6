@@ -1,0 +1,83 @@
+
+Ban đầu: t = -1, b = 0, pc = 0.
+
+
+0:  J 35   nhảy đến vị trí 35, pc = 35
+1:  J 2		nhảy đến vị trí 2, pc = 2, t = 4, b = 5
+2:  INT 5	t = 4+ 5 = 9, 4 cai : RV,DL,RA,SL va bien n
+
+
+---if  p = 0 then Fibonaci := 0;
+3:  LV 0,4   load giá trị của n: t = t + 1 = 10, s[10] = s[s[p+q]] = s[s[0 + 4]] = s[s[4]] =n
+4:  LC 0	 load hằng số 0 : t = t + 1 = 11, s[11] = q = 0
+5:  EQ		 kiểm tra n có bằng 0 hay không: t:=t-1 = 10; if s[10] = s[11] then s[10]:=1 
+else s[10]:=0; nếu n = 0 thì s[5] = 1, n != 0 thì s[5] = 0
+
+-- nếu n = 0
+6:  FJ 11	nếu n!= 0 thì nhảy tới vị trí 11 ( else if) , nếu n = 0 thì tiếp tục
+if s[t]=0 then pc:=q = 11; t:=t-1 = 9
+7:  LA 0,0   load địa chỉ của hàm fibonacci, t:=t+1 = 5 + 1 = 6; s[t]:=base(p)+q = s[6] = 0;
+8:  LC 0	load giá trị hằng số 0: t = t + 1 = 7, s[7] = q = 0;
+9:  ST		lưu giá trị fibonacci = 0 ; s[s[t-1]]:=s[s[6]] = s[0] = s[t] = s[7] = 0 ; 
+t:=t-2 = 5;
+10:  J 34	nhảy đến vị trí 34: pc = 34
+
+-- ELSE IF p = 1 THEN fibonacci := 1
+11:  LV 0,4 Trường hợp n != 0 ( pc = 11, t = t -1 = 9), load giá trị của n: t = t + 1 = 10 , 
+s[t] = s[10] = s[p+q] = s[0 + 4]] = s[4] = n
+12:  LC 1 load hằng số 1 : t = t + 1 = 11, s[11] = q = 1
+13:  EQ		kiểm tra n có bằng 1 hay không: t:=t-1 = 10; if s[10] = s[11] then s[10]:=1 
+else s[10]:=0; nếu n = 1 thì s[10] = 1, n != 1 thì s[10] = 0
+14:  FJ 19	nếu n!= 1 thì nhảy tới vị trí 19 ( else ) , nếu n = 1 thì tiếp tục:
+if s[t]= s[10] = 0 then pc:=q = 19; t:=t-1 = 9
+
+-- nếu n = 1
+15:  LA 0,0 ( t = 5, pc = 15) load địa chỉ của hàm fibonacci, 
+t:=t+1 = 5 + 1 = 6; s[t]:=base(p)+q = s[6] = 0;
+16:  LC 1	load hằng số 1 : t = t + 1 = 7, s[7] = q = 1
+17:  ST		lưu giá trị fibonacci = 1 ; s[s[t-1]]:=s[s[6]] = s[0] = s[t] = s[7] = 1 ; 
+t:=t-2 = 5;
+18:  J 34  nhảy đến vị trí 34: pc = 34
+
+-- nếu n!0 và n != 1 ( t = 9, pc = 19) --ELSE fibonacci := fibonacci(p-1) + fibonacci(p-2);
+19:  LA 0,0		load địa chỉ của hàm fibonacci, 
+t:=t+1 = 9 + 1 = 10; s[t]:=base(p)+q <=> s[10] = 5 + 0 = 5 ;
+20:  INT 4		t = t+ 4 = 10 + 4 = 14, 4 cai : RV,DL,RA,SL : fibonacci(n-1)
+21:  LV 0,4		load giá trị của n: t = t + 1 = 14 + 1 = 15 , 
+s[t] = s[15] = s[p+q] = s[s[0 + 4]] = s[s[4]] = n
+22:  LC 1  load hằng số 1 : t = t + 1 = 16, s[16] = q = 1
+23:  SB		substract t:=t-1 = 15; s[t]:=s[t]-s[t+1] <=> s[15] = s[15] - s[16] = n - 1;
+24:  DCT 5	Giảm 5: t = t - q = 15 - 5 = 10;
+25:  CALL 1,1	gọi hàm fibonacci(n-1): s[t+2]:=b <=> s[12] = DL = 5; 
+s[t+3]:=pc <=> s[13] = RA = 25;s[t+4]:= p <=> s[14] = SL = 1; 
+b:=t+1 = 10 + 1 = 11; pc:=q = 1;
+ 
+26:  INT 4	tăng thêm 4: t = t + 4 = 9 , 4 cai : RV,DL,RA,SL : fibonacci(n-2)
+27:  LV 0,4	load giá trị của n: t = t+1 = 9+1 = 10, 
+s[t] = s[10] = s[s[p+q]] = s[s[0 + 4]] = s[s[4]] = n
+28:  LC 2	load hằng số 2 : t = t + 1 = 11, s[11] = q = 2
+29:  SB		substract t:=t-1 = 10; s[t]:=s[t]-s[t+1] <=> s[10] = s[10] - s[11] = n - 2;	
+30:  DCT 5		Giảm 5: t = t - q = 10- 5 = 5;
+31:  CALL 1,1 	gọi hàm fibonacci(n-2): s[t+2]:=b <=> s[7] = DL = 6; s[t+3]:=pc <=> s[8] = RA = 31;
+ s[t+4]:=base(p) <=> s[9] = SL = 1; b:=t+1 = 5 + 1 = 6; pc:=q = 1;
+32:  AD		cộng 2 hàm fibonacci(n-1) và fibonacci(n-2) : t:=t-1 = 4; 
+s[t]:=s[t]+s[t+1] <=> s[4] = s[4] + s[5] = fibonacci(n-1) + fibonacci(n-2);
+33:  ST		luu lai vao Fibonaci := Fibonaci(n - 1) + Fibonaci(n - 2);
+34:  EF		thoát khỏi hàm: t:=b = 0; pc:=s[b+2] = s[2] = RA; b:=s[b+1] = s[1] = DL;
+
+-- Hàm main
+-- Ban đầu: t = -1, b = 0, pc = 0.
+35:  INT 5	Tăng lên 5: t = 4 + 5 = 9;
+36:  LA 0,4		load địa chỉ của n: 
+t:= t+1 = 5; s[t]:=base(p)+q <=> s[5] = 4;
+37:  RI			 Đọc 1 số nguyên vào t = t+ 1 = 6, s[t+1] = n;
+38:  ST			Lưu giá trị đọc được: s[s[t-1]]:=s[t] <=> s[4] = s[6] = 3; t:=t-2 =4;
+39:  INT 4		Tăng t lên 4: t = t + 4 = 8
+40:  LV 0,4		load địa chỉ của n: t = t + 1 = 8 + 1 = 9 , 
+s[t] = s[9] = s[s[p+q]] = s[s[0 + 4]] = s[s[4]] = n
+41:  DCT 5		Giảm đi 5: t= t-q = 9 - 5 = 4
+42:  CALL 0,1	gọi hàm fibonacci(n): s[t+2]:=b <=> s[6] = DL = 0; 
+s[t+3]:=pc <=> s[7] = RA = 42;
+ s[t+4]:=base(p) <=> s[8] = SL = 0; b:=t+1 = 4 + 1 = 5; pc:=q = 1;
+43:  WRI	in giá trị ra màn hình
+44:  HL 	Kết thúc chương trình.
